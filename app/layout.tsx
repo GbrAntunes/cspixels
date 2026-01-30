@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CS2 Pixel Manager",
   description: "Manage your favorite CS2 grenade lineups",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
