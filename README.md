@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CS2 Pixel Manager
 
-## Getting Started
+A modern web application for Counter-Strike 2 players to save, manage, and organize their favorite grenade lineups (pixels).
 
-First, run the development server:
+![CS2 Pixel Manager](public/window.svg)
+*(Replace with an actual screenshot of your app if desired)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Organize Lineups**: Save smokes, flashes, and molotovs with detailed descriptions.
+- **Step-by-Step Guides**: Upload multiple images to create a visual walkthrough for each lineup.
+- **Map Persistence**: Support for major active duty maps (Mirage, Dust 2, Inferno, Nuke, Ancient, Anubis, Vertigo, Overpass).
+- **Filtering & Search**: Quickly find pixels by Map, Side (CT/TR), or name/description.
+- **CRUD Operations**: Complete control to Create, Read, Update, and Delete pixels.
+- **Local Storage**: Uses a local SQLite database and local file storage, keeping your data private and lightweight.
+- **Responsive Design**: Built with a mobile-first approach using Tailwind CSS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [Lucide React](https://lucide.dev/) (Icons)
+- **Database**: [SQLite](https://www.sqlite.org/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Language**: TypeScript
 
-## Learn More
+## 📦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to set up the project locally on your machine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js (v18 or higher) installed.
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/cspixels.git
+   cd cspixels
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Database Setup:**
+   Run the Prisma migration to create the local SQLite database (`dev.db`).
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to start using the app.
+
+## 📂 Project Structure
+
+- `/app`: Next.js App Router pages and layouts.
+- `/components`: Reusable UI components (PixelCard, PixelForm, etc.).
+- `/lib`: Utility functions and server actions.
+- `/prisma`: Database schema and migrations.
+- `/public/uploads`: Stores the user-uploaded images (ignored in git).
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests. Suggestions and feature requests are welcome!
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
